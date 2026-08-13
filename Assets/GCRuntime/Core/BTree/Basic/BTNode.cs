@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 namespace GCRuntime.BTree
 {
     public abstract class BTNode : ScriptableObject
@@ -8,12 +7,22 @@ namespace GCRuntime.BTree
         /// <summary>
         /// 当前节点状态
         /// </summary> 
-        public BTState State = BTState.Running;
+        [HideInInspector] public BTState State = BTState.Running;
 
         /// <summary>
         /// 检测是否开始
         /// </summary>
-        public bool Started = false;
+        [HideInInspector] public bool Started = false;
+
+        /// <summary>
+        /// GUI标识
+        /// </summary> 
+        [HideInInspector] public string Guid;
+
+        /// <summary>
+        /// 节点在行为树编辑器中的位置
+        /// </summary> 
+        [HideInInspector] public Vector2 Position;
 
         /// <summary>
         /// 主要更新逻辑
@@ -50,5 +59,14 @@ namespace GCRuntime.BTree
         /// </summary>
         /// <returns></returns>
         protected abstract BTState OnUpdate();
+
+        /// <summary>
+        /// 克隆节点
+        /// </summary>
+        /// <returns></returns>
+        public virtual BTNode Clone()
+        {
+            return Instantiate(this);
+        }
     }
 }

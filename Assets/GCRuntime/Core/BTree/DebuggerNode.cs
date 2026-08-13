@@ -9,26 +9,26 @@ namespace GCRuntime.BTree
     {
         public enum LogType
         {
-            INFO,
-            ERROR,
-            WARN
+            Info,
+            Error,
+            Warn
         }
 
         public string Message;
 
-        public LogType logType = LogType.INFO;
+        public LogType logType = LogType.Info;
 
         protected override void OnStart()
         {
             switch (logType)
             {
-                case LogType.INFO:
+                case LogType.Info:
                     Debug.Log($"[GCRuntime - Behaviour Tree] OnStart: {Message}");
                     break;
-                case LogType.ERROR:
+                case LogType.Error:
                     Debug.LogError($"[GCRuntime - Behaviour Tree] OnStart: {Message}");
                     break;
-                case LogType.WARN:
+                case LogType.Warn:
                     Debug.LogWarning($"[GCRuntime - Behaviour Tree] OnStart: {Message}");
                     break;
             }
@@ -38,13 +38,13 @@ namespace GCRuntime.BTree
         {
             switch (logType)
             {
-                case LogType.INFO:
+                case LogType.Info:
                     Debug.Log($"[GCRuntime - Behaviour Tree] OnStop: {Message}");
                     break;
-                case LogType.ERROR:
+                case LogType.Error:
                     Debug.LogError($"[GCRuntime - Behaviour Tree] OnStop: {Message}");
                     break;
-                case LogType.WARN:
+                case LogType.Warn:
                     Debug.LogWarning($"[GCRuntime - Behaviour Tree] OnStop: {Message}");
                     break;
             }
@@ -54,13 +54,13 @@ namespace GCRuntime.BTree
         {
             switch (logType)
             {
-                case LogType.INFO:
+                case LogType.Info:
                     Debug.Log($"[GCRuntime - Behaviour Tree] OnUpdate: {Message}");
                     break;
-                case LogType.ERROR:
+                case LogType.Error:
                     Debug.LogError($"[GCRuntime - Behaviour Tree] OnUpdate: {Message}");
                     break;
-                case LogType.WARN:
+                case LogType.Warn:
                     Debug.LogWarning($"[GCRuntime - Behaviour Tree] OnUpdate: {Message}");
                     break;
             }

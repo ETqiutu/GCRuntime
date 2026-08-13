@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace GCRuntime.BTree
 {
     /// <summary>
@@ -5,6 +7,13 @@ namespace GCRuntime.BTree
     /// </summary> 
     public abstract class DecoratorNode : BTNode
     {
-        public BTNode Child;
+        [HideInInspector] public BTNode Child;
+
+        public override BTNode Clone()
+        {
+            DecoratorNode node = Instantiate(this);
+            node.Child = Child.Clone();
+            return node;
+        }
     }
 }

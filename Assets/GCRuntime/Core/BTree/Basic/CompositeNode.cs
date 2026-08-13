@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace GCRuntime.BTree
 {   
@@ -7,6 +8,13 @@ namespace GCRuntime.BTree
     /// </summary> 
     public abstract class CompositeNode : BTNode
     {
-        public List<BTNode> Children = new List<BTNode>();
+        [HideInInspector] public List<BTNode> Children = new List<BTNode>();
+
+        public override BTNode Clone()
+        {
+            CompositeNode node = Instantiate(this);
+            node.Children = Children.ConvertAll(c => c.Clone());
+            return node;
+        }
     }
 }
