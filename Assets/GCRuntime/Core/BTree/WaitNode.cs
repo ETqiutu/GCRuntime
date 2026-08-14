@@ -4,6 +4,7 @@ namespace GCRuntime.BTree
 {
     public class WaitNode : ActionNode
     {
+        [Header("等待时间")]
         public float Duration = 1;
 
         private float StartTime;

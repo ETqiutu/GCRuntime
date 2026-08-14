@@ -22,4 +22,16 @@ public partial class InspectorView : VisualElement
         });
         Add(container);
     }
+
+    internal void UpdateSelection(DialogueNodeView nodeView)
+    {
+        Clear();
+        UnityEngine.Object.DestroyImmediate(editor);
+        editor = Editor.CreateEditor(nodeView.node);
+        IMGUIContainer container = new IMGUIContainer(() =>
+        {
+            editor.OnInspectorGUI();
+        });
+        Add(container);
+    }
 }

@@ -14,6 +14,7 @@ namespace GCRuntime.BTree
             Warn
         }
 
+        [Header("打印基本设置")]
         public string Message;
 
         public LogType logType = LogType.Info;
