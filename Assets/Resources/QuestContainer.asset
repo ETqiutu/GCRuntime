@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0eb38c3f4a9f924c874fa1ca5731c33, type: 3}
+  m_Name: QuestContainer
+  m_EditorClassIdentifier: Assembly-CSharp::GCRuntime.QuestSystem.QuestContainer
+  QuestInfos:
+  - {fileID: 6859214065320108093}
+  - {fileID: 0}
+--- !u!114 &6859214065320108093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd298a5a0f06524bb7918feea8e2cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GCRuntime.QuestSystem.QuestInfo
+  QuestName: FirstQuest
+  ID: 1111
+  Description: 111
+  QuestDifficulty: 0
+  QuestState: 0
+  SingleTime: 0

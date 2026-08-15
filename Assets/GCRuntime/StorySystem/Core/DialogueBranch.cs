@@ -6,10 +6,21 @@ namespace GCRuntime.Dialogue
     [CreateAssetMenu(fileName = "DialogueBranch", menuName = "GCRuntime/Dialogue/Branch")]
     public class DialogueBranch : DialogueNode
     {
+        
+        [Header("分支选项")]
+        /// <summary>
+        /// 说话者
+        /// </summary>
+        public string Speaker;
+
+        /// <summary>
+        /// 说话内容
+        /// </summary> 
+        [TextArea(3, 10)] public string Content;
+
         /// <summary>
         /// 选择所有的子节点
         /// </summary> 
-        [Header("分支选项")]
         [HideInInspector] public List<DialogueNode> Options = new List<DialogueNode>();
         
         /// <summary>

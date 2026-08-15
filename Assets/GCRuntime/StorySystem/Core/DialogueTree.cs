@@ -137,6 +137,8 @@ namespace GCRuntime.Dialogue
             if (branch != null)
             {
                 branch.Options.Remove(child);
+                int index = branch.Options.IndexOf(child);
+                branch.SelectionContent.RemoveAt(index);
             }
             DialogueRoot root = parent as DialogueRoot;
             if (root != null)
